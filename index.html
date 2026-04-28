@@ -113,6 +113,11 @@ footer { border-top:var(--border); background:#fff; }
   .usage-grid { grid-template-columns:1fr; }
   footer { padding:20px; flex-direction:column; gap:8px; text-align:center; }
 }
+
+.swatch-hex { position:relative; display:flex; align-items:center; justify-content:space-between; gap:8px; }
+.copy-btn { background:none; border:none; cursor:pointer; padding:2px; opacity:0.4; transition:opacity 0.15s; flex-shrink:0; font-family:var(--mono); font-size:9px; color:inherit; letter-spacing:0.05em; }
+.copy-btn:hover { opacity:1; }
+.copy-btn.copied { opacity:1; color:var(--orange); }
 </style>
 </head>
 <body>
@@ -153,7 +158,12 @@ footer { border-top:var(--border); background:#fff; }
     </div>
     <div class="asset-card">
       <div class="preview-pair single">
-        <div class="preview on-light" style="min-height:200px; padding:40px;"><span class="preview-tag">Badge</span><svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" version="1.1" viewBox="0 0 225.5 73.2"><defs><style>.st1{stroke-miterlimit:10;fill:#1e1c1d;stroke:#231f20;stroke-width:.5px}</style></defs><rect width="213.1" height="67.2" x="6.2" y="3" rx="33.6" ry="33.6" style="fill:#f4f5f5"/><path d="M185.7 71.1H39.8c-19 0-34.5-15.5-34.5-34.5S20.8 2 39.8 2h145.9c19 0 34.5 15.5 34.5 34.5S204.7 71 185.7 71ZM39.8 3.9c-18 0-32.7 14.6-32.7 32.7s14.7 32.7 32.7 32.7h145.9c18 0 32.7-14.7 32.7-32.7S203.7 3.9 185.7 3.9z" style="fill:#d7d7d7;stroke:#fff;stroke-miterlimit:10"/><path d="M39.1 26.4v6.4h6.4v-6.4h2.1v17.2h-2.1V35h-6.4v8.6H37V26.4zM53.2 30.7v10.7h-2.1V30.7zm4.3 10.7v2.1h-4.3v-2.1zm4.3-10.7v12.9h-2.1v-2.1h-2.1v-2.1h2.1v-8.6h2.1ZM69.4 30.7v2.1h-2.1v10.7h-2.1V30.6h4.3Zm2.2 2.1v10.7h-2.1V32.8zm0 0v-2.1h2.1v2.1zm4.3 0v10.7h-2.1V32.8zM81.4 37.1v4.3h-2.1v-4.3zm6.4-6.4v2.1h-6.4v-2.1zm0 8.6v-2.1h-6.4v-2.1h6.4V33h2.1v10.7h-2.1v-2.1h-2.1v-2.1h2.1Zm-2.1 2.1v2.1h-4.3v-2.1zM95.4 30.7v2.1h2.1v2.1h-2.1v8.6h-2.1V30.6h2.1Zm6.5 0v2.1h-4.3v-2.1zm2.1 2.1v10.7h-2.1V32.8zM123.6 30.7V35h6.4v-4.3h2.1v12.9H130v-6.4h-6.4v6.4h-2.1V30.7zm2.1-2.2v2.1h-2.1v-2.1zm2.2-2.1v2.1h-2.1v-2.1zm2.1 2.1v2.1h-2.1v-2.1zM137.7 32.8v8.6h-2.1v-8.6zm4.2-2.1v2.1h-4.3v-2.1zm0 10.7v2.1h-4.3v-2.1zm2.2 4.3v2.1h-6.4v-2.1zm0-6.4V35H142v-2.1h2.1v-2.1h2.1v15h-2.1v-4.3H142v-2.1h2.1ZM151.7 32.8v2.1h6.4v-2.1h2.1v4.3h-8.6v4.3h-2.1v-8.6h2.1Zm6.5-2.1v2.1h-6.4v-2.1zm0 10.7v2.1h-6.4v-2.1zm2.1-2.1v2.1h-2.1v-2.1zM165.8 30.7v2.1h2.1v2.1h-2.1v8.6h-2.1V30.6h2.1Zm6.4 0v2.1h-4.3v-2.1zm2.2 2.1v10.7h-2.1V32.8zM182 26.4v4.3h6.4v2.1H182v8.6h-2.1v-8.6h-2.1v-2.1h2.1v-4.3zm4.3 15v2.1H182v-2.1zm2.2-2.1v2.1h-2.1v-2.1z" class="st1"/></svg></div>
+        <div class="preview on-light" style="min-height:200px; padding:40px;"><span class="preview-tag">Badge</span><svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" version="1.1" viewBox="0 0 225.5 73.2"><defs><style>.st1{stroke-miterlimit:10;fill:#1e1c1d;stroke:#231f20;stroke-width:.5px}
+.swatch-hex { position:relative; display:flex; align-items:center; justify-content:space-between; gap:8px; }
+.copy-btn { background:none; border:none; cursor:pointer; padding:2px; opacity:0.4; transition:opacity 0.15s; flex-shrink:0; font-family:var(--mono); font-size:9px; color:inherit; letter-spacing:0.05em; }
+.copy-btn:hover { opacity:1; }
+.copy-btn.copied { opacity:1; color:var(--orange); }
+</style></defs><rect width="213.1" height="67.2" x="6.2" y="3" rx="33.6" ry="33.6" style="fill:#f4f5f5"/><path d="M185.7 71.1H39.8c-19 0-34.5-15.5-34.5-34.5S20.8 2 39.8 2h145.9c19 0 34.5 15.5 34.5 34.5S204.7 71 185.7 71ZM39.8 3.9c-18 0-32.7 14.6-32.7 32.7s14.7 32.7 32.7 32.7h145.9c18 0 32.7-14.7 32.7-32.7S203.7 3.9 185.7 3.9z" style="fill:#d7d7d7;stroke:#fff;stroke-miterlimit:10"/><path d="M39.1 26.4v6.4h6.4v-6.4h2.1v17.2h-2.1V35h-6.4v8.6H37V26.4zM53.2 30.7v10.7h-2.1V30.7zm4.3 10.7v2.1h-4.3v-2.1zm4.3-10.7v12.9h-2.1v-2.1h-2.1v-2.1h2.1v-8.6h2.1ZM69.4 30.7v2.1h-2.1v10.7h-2.1V30.6h4.3Zm2.2 2.1v10.7h-2.1V32.8zm0 0v-2.1h2.1v2.1zm4.3 0v10.7h-2.1V32.8zM81.4 37.1v4.3h-2.1v-4.3zm6.4-6.4v2.1h-6.4v-2.1zm0 8.6v-2.1h-6.4v-2.1h6.4V33h2.1v10.7h-2.1v-2.1h-2.1v-2.1h2.1Zm-2.1 2.1v2.1h-4.3v-2.1zM95.4 30.7v2.1h2.1v2.1h-2.1v8.6h-2.1V30.6h2.1Zm6.5 0v2.1h-4.3v-2.1zm2.1 2.1v10.7h-2.1V32.8zM123.6 30.7V35h6.4v-4.3h2.1v12.9H130v-6.4h-6.4v6.4h-2.1V30.7zm2.1-2.2v2.1h-2.1v-2.1zm2.2-2.1v2.1h-2.1v-2.1zm2.1 2.1v2.1h-2.1v-2.1zM137.7 32.8v8.6h-2.1v-8.6zm4.2-2.1v2.1h-4.3v-2.1zm0 10.7v2.1h-4.3v-2.1zm2.2 4.3v2.1h-6.4v-2.1zm0-6.4V35H142v-2.1h2.1v-2.1h2.1v15h-2.1v-4.3H142v-2.1h2.1ZM151.7 32.8v2.1h6.4v-2.1h2.1v4.3h-8.6v4.3h-2.1v-8.6h2.1Zm6.5-2.1v2.1h-6.4v-2.1zm0 10.7v2.1h-6.4v-2.1zm2.1-2.1v2.1h-2.1v-2.1zM165.8 30.7v2.1h2.1v2.1h-2.1v8.6h-2.1V30.6h2.1Zm6.4 0v2.1h-4.3v-2.1zm2.2 2.1v10.7h-2.1V32.8zM182 26.4v4.3h6.4v2.1H182v8.6h-2.1v-8.6h-2.1v-2.1h2.1v-4.3zm4.3 15v2.1H182v-2.1zm2.2-2.1v2.1h-2.1v-2.1z" class="st1"/></svg></div>
       </div>
       <div class="card-footer">
         <div><div class="asset-name">Badge</div><div class="asset-desc">Badge &mdash; &ldquo;Human Agent&rdquo; pill label</div></div>
@@ -183,11 +193,11 @@ footer { border-top:var(--border); background:#fff; }
 <section>
   <div class="section-header"><span class="section-title">03 &mdash; Colors</span><div class="section-rule"></div></div>
   <div class="color-grid">
-    <div class="color-swatch"><div class="swatch-color" style="background:#1e1c1d;"></div><div class="swatch-info"><div class="swatch-name">Near Black</div><div class="swatch-hex">#1E1C1D</div></div></div>
-    <div class="color-swatch"><div class="swatch-color" style="background:#f68000;"></div><div class="swatch-info"><div class="swatch-name">Orange</div><div class="swatch-hex">#F68000</div></div></div>
-    <div class="color-swatch"><div class="swatch-color" style="background:#f4f5f5;border-bottom:1px solid #ddd;"></div><div class="swatch-info"><div class="swatch-name">Off White</div><div class="swatch-hex">#F4F5F5</div></div></div>
-    <div class="color-swatch"><div class="swatch-color" style="background:#d7d7d7;border-bottom:1px solid #ccc;"></div><div class="swatch-info"><div class="swatch-name">Light Gray</div><div class="swatch-hex">#D7D7D7</div></div></div>
-    <div class="color-swatch"><div class="swatch-color" style="background:#ffffff;border-bottom:1px solid #ddd;"></div><div class="swatch-info"><div class="swatch-name">White</div><div class="swatch-hex">#FFFFFF</div></div></div>
+    <div class="color-swatch"><div class="swatch-color" style="background:#1e1c1d;"></div><div class="swatch-info"><div class="swatch-name">Near Black</div><div class="swatch-hex"><span>#1E1C1D</span><button class="copy-btn" onclick="copyHex(this, '#1E1C1D')" title="Copy"><svg width="11" height="11" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="4" y="4" width="7" height="7" rx="1"/><path d="M2 8H1.5A.5.5 0 0 1 1 7.5v-6A.5.5 0 0 1 1.5 1h6a.5.5 0 0 1 .5.5V2"/></svg></button></div></div></div>
+    <div class="color-swatch"><div class="swatch-color" style="background:#f68000;"></div><div class="swatch-info"><div class="swatch-name">Orange</div><div class="swatch-hex"><span>#F68000</span><button class="copy-btn" onclick="copyHex(this, '#F68000')" title="Copy"><svg width="11" height="11" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="4" y="4" width="7" height="7" rx="1"/><path d="M2 8H1.5A.5.5 0 0 1 1 7.5v-6A.5.5 0 0 1 1.5 1h6a.5.5 0 0 1 .5.5V2"/></svg></button></div></div></div>
+    <div class="color-swatch"><div class="swatch-color" style="background:#f4f5f5;border-bottom:1px solid #ddd;"></div><div class="swatch-info"><div class="swatch-name">Off White</div><div class="swatch-hex"><span>#F4F5F5</span><button class="copy-btn" onclick="copyHex(this, '#F4F5F5')" title="Copy"><svg width="11" height="11" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="4" y="4" width="7" height="7" rx="1"/><path d="M2 8H1.5A.5.5 0 0 1 1 7.5v-6A.5.5 0 0 1 1.5 1h6a.5.5 0 0 1 .5.5V2"/></svg></button></div></div></div>
+    <div class="color-swatch"><div class="swatch-color" style="background:#d7d7d7;border-bottom:1px solid #ccc;"></div><div class="swatch-info"><div class="swatch-name">Light Gray</div><div class="swatch-hex"><span>#D7D7D7</span><button class="copy-btn" onclick="copyHex(this, '#D7D7D7')" title="Copy"><svg width="11" height="11" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="4" y="4" width="7" height="7" rx="1"/><path d="M2 8H1.5A.5.5 0 0 1 1 7.5v-6A.5.5 0 0 1 1.5 1h6a.5.5 0 0 1 .5.5V2"/></svg></button></div></div></div>
+    <div class="color-swatch"><div class="swatch-color" style="background:#ffffff;border-bottom:1px solid #ddd;"></div><div class="swatch-info"><div class="swatch-name">White</div><div class="swatch-hex"><span>#FFFFFF</span><button class="copy-btn" onclick="copyHex(this, '#FFFFFF')" title="Copy"><svg width="11" height="11" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="4" y="4" width="7" height="7" rx="1"/><path d="M2 8H1.5A.5.5 0 0 1 1 7.5v-6A.5.5 0 0 1 1.5 1h6a.5.5 0 0 1 .5.5V2"/></svg></button></div></div></div>
   </div>
 </section>
 <section>
@@ -215,5 +225,16 @@ footer { border-top:var(--border); background:#fff; }
   <div class="footer-left"><div class="footer-dot"></div><span class="footer-text">Agents Day Assets &middot; May 2026</span></div>
   <a class="footer-url" href="https://www.agentsday.org" target="_blank" rel="noopener">agentsday.org &rarr;</a>
 </div></footer>
-</body>
+
+<script>
+function copyHex(btn, val) {
+  navigator.clipboard.writeText(val);
+  btn.classList.add('copied');
+  btn.innerHTML = 'copied';
+  setTimeout(() => {
+    btn.classList.remove('copied');
+    btn.innerHTML = '<svg width="11" height="11" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="4" y="4" width="7" height="7" rx="1"/><path d="M2 8H1.5A.5.5 0 0 1 1 7.5v-6A.5.5 0 0 1 1.5 1h6a.5.5 0 0 1 .5.5V2"/></svg>';
+  }, 1500);
+}
+</script></body>
 </html>
