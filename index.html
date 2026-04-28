@@ -94,7 +94,8 @@ section:last-child { border-bottom:none; }
 
 footer { border-top:var(--border); background:#fff; }
 .footer-left { display:flex; align-items:center; gap:16px; }
-.footer-dot { width:6px; height:6px; border-radius:50%; background:var(--orange); flex-shrink:0; }
+.footer-dot { width:5px; height:5px; background:var(--orange); flex-shrink:0; animation:blink 1.6s ease-in-out infinite; }
+@keyframes blink { 0%,100%{opacity:1} 50%{opacity:0.15} }
 .footer-text { font-size:10px; color:var(--mid); letter-spacing:0.08em; }
 .footer-url { font-size:10px; color:var(--mid); text-decoration:none; letter-spacing:0.08em; }
 .footer-url:hover { color:var(--orange); }
